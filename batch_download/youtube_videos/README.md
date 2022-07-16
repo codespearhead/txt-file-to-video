@@ -3,6 +3,7 @@
 ```sh
 instance=2
 ```
+
 Ps: this can be any number. We're just assigning a different number to each instance so we don't lose track of which instance is download which text file with YouTube links.
 
 ## Change prompt
@@ -33,6 +34,18 @@ sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o
 printf "\n- Tmux version: %s\n- FFMPEG version: %s\n- YT-DLP version: %s\n- Vim version: %s\n\n" "$(tmux -V | awk '{print $NF}')" "$(ffmpeg -version | sed -n "s/ffmpeg version \([-0-9.]*\).*/\1/p;")" "$(yt-dlp --version)" "$(vim --version | head -n 1)"
 ```
 
+
+## Open Tmux
+```sh
+tmux
+```
+
+## Define Instance variable (again)
+
+```sh
+instance=1
+```
+
 ## Create a folders inside your Amazon EFS. It's advisable each instance operate on a separate folder and the lists to be in a separate folder as well
 
 ```sh
@@ -54,15 +67,11 @@ Press ESC to quit the Insert mode and type :set nu to show line numbers. If all 
 ## Go to folder in each instance
 
 ```sh
-cd /mnt/efs/fs1/$instance
+cd /mnt/efs/fs1/$instance &&
 ```
 
-## Clear the terminal and Open tmux
+Ps: I suggest clearing the terminal after that. To do so, just run "clear" and press ENTER
 
-```sh
-clear &&
-tmux
-```
 
 ## Start downloading all videos in listed in file "1.txt"
 
