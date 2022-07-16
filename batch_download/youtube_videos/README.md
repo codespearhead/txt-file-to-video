@@ -1,3 +1,5 @@
+# Section 1 - Prerequisites
+
 ## Define the number of the instance
 
 ```sh
@@ -12,6 +14,12 @@ Ps: this can be any number. We're just assigning a different number to each inst
 echo "PS1=\"\[\033[01;32m\]\u@webscraper_$instance\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ \"" >> ~/.bashrc && source ~/.bashrc
 ```
 
+## Install yt-dlp
+
+```sh
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp && sudo chmod a+rx /usr/local/bin/yt-dlp
+```
+
 ## Install tmux and ffmpeg and vim, then reboot
 
 ```sh
@@ -22,20 +30,16 @@ sudo reboot
 
 Ps: if it seems that the terminal is hung at "All packages are up to date", just tap ENTER
 
-## Install yt-dlp
-
-```sh
-sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp && sudo chmod a+rx /usr/local/bin/yt-dlp
-```
-
 ## Make sure yt-dlp, ffmpeg, tmux and vim are installed
 
 ```sh
 printf "\n- Tmux version: %s\n- FFMPEG version: %s\n- YT-DLP version: %s\n- Vim version: %s\n\n" "$(tmux -V | awk '{print $NF}')" "$(ffmpeg -version | sed -n "s/ffmpeg version \([-0-9.]*\).*/\1/p;")" "$(yt-dlp --version)" "$(vim --version | head -n 1)"
 ```
 
+# Section 2 - Buckle up!
 
 ## Open Tmux
+
 ```sh
 tmux
 ```
@@ -67,11 +71,13 @@ Press ESC to quit the Insert mode and type :set nu to show line numbers. If all 
 ## Go to folder in each instance
 
 ```sh
-cd /mnt/efs/fs1/$instance &&
+cd /mnt/efs/fs1/$instance
 ```
 
 Ps: I suggest clearing the terminal after that. To do so, just run "clear" and press ENTER
 
+
+# Section 3 - Go!
 
 ## Start downloading all videos in listed in file "1.txt"
 
@@ -96,7 +102,8 @@ Ps: important to note that every time you enter the session, you have to detach 
 # Mention code to compare files
 [TODO] [4] ...
 
-Credits:
+
+# Credits: [TODO]
 
 [1] https://superuser.com/questions/1609806/get-ffmpeg-version-number
 [2] https://github.com/yt-dlp/yt-dlp
