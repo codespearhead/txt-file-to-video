@@ -96,12 +96,45 @@ exit
 
 Ps: important to note that every time you enter the session, you have to detach from it instead of running "exit" inside the session, or else the session will be closed.
 
-# Mention code to extract all the links
-[TODO] [3] ...
 
-# Mention code to compare files
-[TODO] [4] ...
+## Mention code to extract all the links [TODO]
 
+[3] ...
+
+## Code to 
+
+```sh
+ls | wc -l
+```
+
+## Mention code to compare files [TODO]
+
+[4] ...
+
+
+
+
+## Code to print out missing video links
+
+[5]
+[6]
+
+```sh
+instance=7
+downloadedvideos=""
+missingvideos=""
+
+for file in *; do
+  [[ "$file" =~ \[([^\)]+)\] ]]
+  downloadedvideos+="https://www.youtube.com/watch?v=${BASH_REMATCH[1]}"$'\n'
+done
+
+missingvideos=$(grep -vFx "$downloadedvideos" "../lists/$instance.txt")
+
+[TODO]
+#print zero if there are no missing videos or the links if there are
+printf "Missing videos: %s" "$(missingvideos)"
+```
 
 # Credits: [TODO]
 
@@ -109,3 +142,5 @@ Ps: important to note that every time you enter the session, you have to detach 
 [2] https://github.com/yt-dlp/yt-dlp
 [3] https://www.quora.com/How-do-I-grab-the-individual-urls-of-a-YouTube-playlist
 [4] https://stackoverflow.com/questions/4078933/find-difference-between-two-text-files-with-one-item-per-line
+[5] https://stackoverflow.com/questions/6208367/regex-to-match-stuff-between-parentheses
+[6] https://superuser.com/questions/31464/looping-through-ls-results-in-bash-shell-script
