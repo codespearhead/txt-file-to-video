@@ -6,7 +6,7 @@
     <img src="https://thumbs.dreamstime.com/z/film-dvd-10440737.jpg" width="166px" height="120px"/>
   </a>
   <br><br>
-    Learn to extract YouTube video links from the confort of your browser and download them from a text file
+    Learn to extract YouTube video links from the comfort of your browser, and to download them from a text file
   <br>
 </p>
 
@@ -160,7 +160,7 @@ printf "Missing videos: %s" "$(missingvideos)"
 
 > **Note**: We are not affiliated, associated, authorized, endorsed by or in any way officially connected to YouTube, LLC. (www.youtube.com).
 
-> **Warning**: As of today [2022-12-12], YouTube's against video downloading, as explicited in the Permissions and Restrictions section of their [Terms of Service](https://www.youtube.com/t/terms): You are **not allowed to**: access, reproduce, **download**, distribute, transmit, broadcast, display, sell, license, alter, modify or otherwise use any part of the Service or any Content **except**: (a) as expressly authorized by the Service; or (b) **with prior written permission from YouTube** and, if applicable, the respective rights holders.
+> **Warning**: As of today [2022-12-12], YouTube's against video downloading, as stated in the Permissions and Restrictions section of their [Terms of Service](https://www.youtube.com/t/terms): You are **not allowed to**: access, reproduce, **download**, distribute, transmit, broadcast, display, sell, license, alter, modify or otherwise use any part of the Service or any Content **except**: (a) as expressly authorized by the Service; or (b) **with prior written permission from YouTube** and, if applicable, the respective rights holders.
 
 > **Note**:
 > Copyright Disclaimer under section 107 of the Copyright Act 1976, allowance is made for “fair use” for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research.
